@@ -1,0 +1,63 @@
+name: github_test
+description: A new Flutter project.
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.19.6 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  provider: ^6.1.2
+  dio: ^5.4.1
+  get_it: ^7.6.7
+  json_annotation: ^4.8.1
+  injectable: ^2.3.5
+  flutter_secure_storage: ^9.0.0
+  shared_preferences: ^2.2.2
+  after_layout: ^1.2.0
+  flutter_svg: ^2.0.10+1
+  hive: ^2.2.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  retrofit_generator: '>=7.0.0 <=8.1.0'
+  build_runner: ^2.4.8
+  injectable_generator: ^2.4.1
+  json_serializable: ^6.7.1
+  flutter_gen_runner: ^5.4.0
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+  generate: false
+  assets:
+    - assets/icons/
+    - assets/fonts/
+
+  fonts:
+    - family: Raleway
+      fonts:
+        - asset: assets/fonts/Raleway-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Raleway-SemiBold.ttf
+          weight: 600
+
+flutter_gen:
+  output: lib/configs/assets/
+  line_length: 100
+  assets:
+    enabled: true
+    outputs:
+      package_parameter_enabled: true
+      class_name: AppAssets
+
+  integrations:
+    flutter_svg: true
